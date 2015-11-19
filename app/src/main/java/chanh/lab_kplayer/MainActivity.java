@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.boysandgirls);
             mMplayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-            AssetFileDescriptor afd2 = getResources().openRawResourceFd(R.raw.oohahh);
-            mMplayer.setDataSource(afd2.getFileDescriptor(), afd2.getStartOffset(), afd2.getLength());
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
